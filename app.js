@@ -13,7 +13,7 @@ function addTask(){
         li.innerHTML = inputTask.value;
         inputTaskList.appendChild(li);
         let span = document.createElement('span')
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "&#x2212";
         li.appendChild(span);
     }
     inputTask.value = '';
@@ -29,7 +29,7 @@ inputTaskList.addEventListener('click', function(change){
     }
 }, false);
 
-// function API
+// API
 const fetchData = async() =>{
     const response = await fetch('https://module3-api-is2m.onrender.com/random-todos');
     return await response.json();
@@ -45,7 +45,7 @@ async function main(){
         console.log(task);
         li.innerHTML = task;
         let span = document.createElement('span')
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "&#x2212";
         li.appendChild(span);
         taskListElement.appendChild(li);
 
